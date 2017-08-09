@@ -1,7 +1,64 @@
+.main{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center top;
+    font-family: 'Black Ops One', cursive;
+    color: white;
+    padding-bottom: 5%;
+    background: #667db6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.main h2{
+    text-shadow: 2px 2px 4px #000;
+    font-size: 4rem;
+    line-height: 5rem;
+    letter-spacing: 2px;
+}
+.main img{
+    width: 180px;
+    height: 180px;
+}
 .player-roster {
     border: 1px solid black;
 }
 .player-card {
     display: inline-block;
     border: 1px solid black;
+}
+.players-info-container{
+    height: auto;
+    padding-bottom: 100%;
+}
+.player-container{
+    height: auto;
+}
+.main button{
+    background-color: red;
+    color: white;
+    margin: 10px 0px;
+    box-shadow: 2px 4px 6px rgba(0,0,0, 0.5);
+}
+.main button:hover{
+    color: white;
+    
+}
+.main input{
+    margin: 10px 0px;
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+.input-group{
+    display: block;
+    margin: 0 auto;
+}
+.butt-text{
+    color: white;
+    text-shadow: 2px 2px 2px #000;
+    font-size: 1.65rem;
+    line-height: 2rem;
+    padding: 5px 0px;
+    letter-spacing: 1px;
 }

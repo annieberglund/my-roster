@@ -1,6 +1,6 @@
 var PlayerService = function (endpointUri, callback) {
     var playersData = [];
-    var myRoster= [];
+    var myRoster = [];
 
     function loadPlayersData() {
 
@@ -30,16 +30,16 @@ var PlayerService = function (endpointUri, callback) {
         })
     }
 
-//ADD PLAYER TO ROSTER
-    this.addPlayer = function(id) {
-        var player = playersData.find(char => char.id == id)   
-    
-    if(myRoster.indexOf(player) == -1) {
-        myRoster.push(player)
+    //ADD PLAYER TO ROSTER
+    this.addPlayer = function (id) {
+        var player = playersData.find(char => char.id == id)
+        if (myRoster.indexOf(player) == -1) {
+            myRoster.push(player)
+        }
     }
-    }
+   
 
-//GET PLAYER BY TEAM    
+    //GET PLAYER BY TEAM    
     this.getPlayersByTeam = function (teamName) {
         var list = playersData.filter(function (player) {
             //console.log(player)
@@ -49,7 +49,7 @@ var PlayerService = function (endpointUri, callback) {
         });
         return list;
     }
-//GET PLAYERS BY POSITION
+    //GET PLAYERS BY POSITION
     this.getPlayersByPosition = function (position) {
         var list = playersData.filter(function (player) {
             if (player.position.toLowerCase() == position && player.firstname != '') {
@@ -58,10 +58,17 @@ var PlayerService = function (endpointUri, callback) {
         });
         return list;
     }
-    this.getPlayersData = function () {
-        return playersData;
-
+        this.getPlayersByName = function (playerName) {
+        var list = playersData.filter(function (player) {
+            if (player.fullname.toLowerCase() == playerName  && player.firstname != '') {
+                return true;
+            }
+        });
+        return list;
     }
+   this.getRoster = function() {
+       return JSON.parse(JSON.stringify(myRoster))
+   }
 
     loadPlayersData();
 

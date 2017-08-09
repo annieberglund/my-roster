@@ -53,6 +53,7 @@ background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3
 .input-group{
     display: block;
     margin: 0 auto;
+    width: 40%;
 }
 .butt-text{
     color: white;

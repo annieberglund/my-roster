@@ -21,19 +21,19 @@
             </div>
         </div>
         <div class="row text-center">
-            <div class="col-xs-6 input-group">
+            <div class="col-xs-12 input-group">
                 <form id="search-text" type="text" onsubmit="app.controllers.controller.getPlayersByTeam(event)">
                     <input type="text" class="form-control" name="teamName" placeholder="Team Name Here">
                     <button type="submit" class="btn search-btn" id="get-player"><span class="butt-text">Find Players By Team</span></button>
                 </form>
             </div>
-            <div class="col-xs-6 input-group">
+            <div class="col-xs-12 input-group">
                 <form id="search-text" type="text" onsubmit="app.controllers.controller.getPlayersByPosition(event)">
                     <input type="text" class="form-control" name="position" placeholder="Player Position Here">
                     <button type="submit" class="btn search-btn" id="get-player"><span class="butt-text">Find Players By Position</span></button>
                 </form>
             </div>
-             <div class="col-xs-6 input-group">
+             <div class="col-xs-12 input-group">
                 <form id="search-text" type="text" onsubmit="app.controllers.controller.getPlayersByName(event)">
                     <input type="text" class="form-control" name="fullname" placeholder="Player Name Here">
                     <button type="submit" class="btn search-btn" id="get-player"><span class="butt-text">Find Players By Name</span></button>
@@ -41,7 +41,7 @@
             </div>
         </div>
         <div class="players-info-container">
-            <div class="row">
+            <div class="row text-center">
                 <div class="col-xs-6">
                     <h3>MY ROSTER</h3>
                     <div id="my-roster">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="col-xs-6">
-                    <h3>PLAYER PICKs</h3>
+                    <h3>PLAYER PICKS</h3>
                     <div id="player-card">
 
                     </div>
@@ -57,7 +57,6 @@
             </div>
         </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="service.js"></script>
     <script src="controller.js"></script>

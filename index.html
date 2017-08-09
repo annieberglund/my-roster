@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>My Roster</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
-    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="heading text-center">
+                    <h2>FANTASY FB</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 input-group">
+                <form id="search-text" type="text" onsubmit="app.controllers.controller.getPlayersByTeam(event)">
+                    <input type="text" class="form-control" name="teamName" placeholder="Team Name Here">
+                    <button type="submit" class="btn search-btn" id="get-player"></button>
+                </form>
+            </div>
+            <div class="col-xs-3 input-group">
+                <form id="search-text" type="text" onsubmit="app.controllers.controller.getPlayersByPosition(event)">
+                    <input type="text" class="form-control" name="position" placeholder="Player Name Here">
+                    <button type="submit" class="btn search-btn" id="get-player"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div id="my-team">
+
+
+        </div>
+        <div id="player-roster" class="text-center">
+
+        </div>
+        <div id="player-card">
+
+        </div>
+
+    </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="service.js"></script>
+    <script src="controller.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
